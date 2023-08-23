@@ -22,7 +22,7 @@ do{
                 empresa.listar()
                 break
             case 3:
-                //empresa.cadastrarEmpresas()
+                empresa.cadastrar()
                 break
             case 4:
                 candidato.cadastrar()

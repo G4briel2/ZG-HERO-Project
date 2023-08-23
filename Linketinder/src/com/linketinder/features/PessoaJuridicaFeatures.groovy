@@ -27,7 +27,30 @@ class PessoaJuridicaFeatures extends Pessoa{
         }
     }
 
+    def cadastrar(){
+        print("#Cadastrar Empresa#\nNome da empresa: ")
+        String _nome = System.in.newReader().readLine()
 
+        String _email = stringValidator("E-mail corporativo: ", /[_A-Za-z0-9-]+(.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})/)
 
+        print("Descrição: ")
+        String _descricao = System.in.newReader().readLine()
+
+        println("#Competências#")
+        def _competencias = cadastrarHabilidades("competência")
+
+        String _cnpj = stringValidator("CNPJ da empresa: ", /\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}/)
+
+        print("País: ")
+        String _pais = System.in.newReader().readLine()
+
+        print("Estado: ")
+        String _estado = System.in.newReader().readLine()
+
+        print("CEP: ")
+        String _cep = System.in.newReader().readLine()
+
+        empresas.add(new PessoaJuridica(_nome, _email, _descricao, _competencias, _cnpj, _pais, _estado, _cep))
+    }
 
 }
