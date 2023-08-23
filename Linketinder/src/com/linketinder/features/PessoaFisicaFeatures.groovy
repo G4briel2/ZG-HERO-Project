@@ -18,5 +18,13 @@ class PessoaFisicaFeatures extends Pessoa{
     def onLoad(){
         fixedPessoa.each {candidatos.add(it)}
     }
+
+    def listar(){
+        def i = 1
+        candidatos.each {
+            println("$i - $it")
+            i++
+        }
+    }
 }
 

@@ -15,7 +15,7 @@ do{
 
         switch (opcao){
             case 1:
-                //candidato.listar()
+                candidato.listar()
                 break
             case 2:
                 //empresa.listarEmpresas()
