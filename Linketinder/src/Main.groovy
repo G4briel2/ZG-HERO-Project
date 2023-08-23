@@ -5,6 +5,7 @@ PessoaFisicaFeatures candidato = new PessoaFisicaFeatures()
 PessoaJuridicaFeatures empresa = new PessoaJuridicaFeatures()
 
 candidato.onLoad()
+empresa.onLoad()
 
 boolean repeat = true
 
