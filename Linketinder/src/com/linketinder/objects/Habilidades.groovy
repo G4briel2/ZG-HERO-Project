@@ -1,7 +1,7 @@
 package com.linketinder.objects
 
 enum Habilidades{
-    PHYTON("Phyton"),
+    PYTHON("Python"),
     JAVA("Java"),
     SPRING_FRAMEWORK("Spring Framework"),
     ANGULAR("Angular")
