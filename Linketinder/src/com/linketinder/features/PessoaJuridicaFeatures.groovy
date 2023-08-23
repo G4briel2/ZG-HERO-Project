@@ -18,4 +18,16 @@ class PessoaJuridicaFeatures extends Pessoa{
     def onLoad(){
         fixedEmpresa.each {empresas.add(it)}
     }
+
+    def listar(){
+        int i = 1
+        empresas.each {
+            println("$i - $it")
+            i++
+        }
+    }
+
+
+
+
 }
