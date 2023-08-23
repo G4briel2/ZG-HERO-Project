@@ -1,11 +1,8 @@
-import com.linketinder.features.PessoaFisicaFeatures
-import com.linketinder.features.PessoaJuridicaFeatures
+import com.linketinder.features.FeaturesManager
 
-PessoaFisicaFeatures candidato = new PessoaFisicaFeatures()
-PessoaJuridicaFeatures empresa = new PessoaJuridicaFeatures()
+FeaturesManager feat = new FeaturesManager()
+feat.onLoad()
 
-candidato.onLoad()
-empresa.onLoad()
 
 boolean repeat = true
 
@@ -16,16 +13,16 @@ do{
 
         switch (opcao){
             case 1:
-                candidato.listar()
+                feat.listarCandidatos()
                 break
             case 2:
-                empresa.listar()
+                feat.listarEmpresas()
                 break
             case 3:
-                empresa.cadastrar()
+                feat.cadastrarEmpresas()
                 break
             case 4:
-                candidato.cadastrar()
+                feat.cadastrarCandidatos()
                 break
             case 5:
                 repeat = false
