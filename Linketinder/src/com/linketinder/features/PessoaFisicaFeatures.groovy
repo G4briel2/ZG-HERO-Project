@@ -26,5 +26,30 @@ class PessoaFisicaFeatures extends Pessoa{
             i++
         }
     }
+
+    def cadastrar(){
+        print("#Cadastrar candidato#\nInforme seu nome: ")
+        String _nome = System.in.newReader().readLine()
+
+        String _email = stringValidator("Informe seu e-mail: ", /[_A-Za-z0-9-]+(.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})/)
+
+        print("Informe seu estado: ")
+        String _estado = System.in.newReader().readLine()
+
+        print("Informe seu CEP: ")
+        String _cep = System.in.newReader().readLine()
+
+        print("Crie sua bio: ")
+        String _descricao = System.in.newReader().readLine()
+
+        println("#Habilidades#")
+        def _habilidades = cadastrarHabilidades("habilidade")
+
+        String _cpf = stringValidator("Informe seu CPF: ", /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/)
+
+        int _idade = intValidator("Informe sua idade: ")
+
+        candidatos.add(new PessoaFisica(_nome, _email, _estado, _cep, _descricao, _habilidades, _cpf, _idade))
+    }
 }
 

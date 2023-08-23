@@ -24,7 +24,7 @@ do{
                 //empresa.cadastrarEmpresas()
                 break
             case 4:
-                //candidato.cadastrarCandidatos()
+                candidato.cadastrar()
                 break
             case 5:
                 repeat = false
