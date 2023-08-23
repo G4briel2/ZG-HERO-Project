@@ -4,6 +4,8 @@ import com.linketinder.features.PessoaJuridicaFeatures
 PessoaFisicaFeatures candidato = new PessoaFisicaFeatures()
 PessoaJuridicaFeatures empresa = new PessoaJuridicaFeatures()
 
+candidato.onLoad()
+
 boolean repeat = true
 
 do{
@@ -13,7 +15,7 @@ do{
 
         switch (opcao){
             case 1:
-                //candidato.listarCandidatos()
+                //candidato.listar()
                 break
             case 2:
                 //empresa.listarEmpresas()
