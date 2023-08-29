@@ -1,13 +1,10 @@
 package com.linketinder.features
 
-class FeaturesManager{
-    PessoaFisicaFeatures candidato = new PessoaFisicaFeatures()
-    PessoaJuridicaFeatures empresa = new PessoaJuridicaFeatures()
+import com.linketinder.models.Habilidades
 
-    def onLoad(){
-        candidato.onLoad()
-        empresa.onLoad()
-    }
+class FeaturesManager{
+    CandidatoFeatures candidato = new CandidatoFeatures()
+    EmpresaFeatures empresa = new EmpresaFeatures()
 
     def listarCandidatos(){
         candidato.listar()
@@ -17,11 +14,11 @@ class FeaturesManager{
         empresa.listar()
     }
 
-    def cadastrarEmpresas(){
-        empresa.cadastrar()
+    def cadastrarCandidatos(String nome, String email, String estado, String cep, String descricao, ArrayList<Habilidades> habilidades, String cpf, int idade){
+        candidato.cadastrar(nome, email, estado, cep, descricao, habilidades, cpf, idade)
     }
 
-    def cadastrarCandidatos(){
-        candidato.cadastrar()
+    def cadastrarEmpresas(String nome, String email, String descricao, ArrayList<Habilidades> competencias, String cnpj, String pais, String estado, String cep) {
+        empresa.cadastrar(nome, email, descricao, competencias, cnpj, pais, estado, cep)
     }
 }
