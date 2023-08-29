@@ -1,9 +1,9 @@
-package com.linketinder.objects
+package com.linketinder.models
 
-class PessoaJuridica extends Pessoa{
+class Empresa extends Pessoa{
     String cnpj, pais
 
-    PessoaJuridica(String nome, String email, String descricao, ArrayList<Habilidades> competencias, String cnpj, String pais, String estado, String cep) {
+    Empresa(String nome, String email, String descricao, ArrayList<Habilidades> competencias, String cnpj, String pais, String estado, String cep) {
         super(nome, email, estado, cep, descricao, competencias)
         this.cnpj = cnpj
         this.pais = pais

@@ -1,4 +1,4 @@
-package com.linketinder.objects
+package com.linketinder.models
 
 enum Habilidades{
     PYTHON("Python"),
